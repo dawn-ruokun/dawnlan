@@ -1,11 +1,13 @@
-简体中文 | [English](./README_EN.md)
+简体中文 
 
 <p>
-<strong><h2>無名の主页</h2></strong>
-简单的小主页，原来的看够了，重新弄了一个
+<strong><h2>Dawnlan资源聚合网站</h2></strong>
+将各类工具型网站聚合起来，方便使用，原理类似于收藏夹，可以这么理解。
+    网站服务器由于一段时间忘记续费，导致很大一段数据丢失，不得不重新搭建，因此很多地方都是套用的模板，看起来十分不完善。请各位见谅！
+        网站属于公益类型，没有任何广告，非盈利学习类网站。欢迎各位拉取项目搭建自己的网站！
 </p>
 
-![無名の主页](https://img.imsyy.top/other/imsyy-home.webp)
+模板引用——![無名の主页](https://img.imsyy.top/other/imsyy-home.webp)
 
 >主页的 Logo 字体已经过压缩，若用本站 Logo 以外的字母会变回默认字体，这里是 [完整字体](https://file.imsyy.top/font/Pacifico-Regular.ttf)
 
@@ -31,6 +33,7 @@
 
 由于原天气 API 不稳定，已更换天气 API，现需要前往以下网站获取 key
 
+    天气类的api不太稳定，且定位有一点小问题，原作者使用的是和风，高德的天气定位很准但很麻烦，因此我拉取的别家公益性api。你可以自行搜索，找一些更稳定的。
 - 前往 [ROLL](https://www.mxnzp.com/doc/list) 获取 app_id 和 app_secret，用于获取城市信息
 - 前往 [和风天气](https://dev.qweather.com/) 获取 key，用于获取天气信息
 
@@ -91,6 +94,7 @@
 
 ### 音乐
 
+ ！该音乐的框架有一些问题，我采用了其它方案替代，达到我自己喜欢的效果，但对手机端的网页和缩小后的网页适配有一些问题，但没大影响，我保留了这个设计。
 >本项目采用了基于 `MetingJS` 的 `Aplayer` 音乐播放器，可实现快速自定义歌单  
 >*仅支持 **中国大陆地区**，其他区域请将 [以下内容](https://file.imsyy.top/js/music/music-other.js) 替换 `music.js` 以实现音乐播放器的正常使用
 
@@ -147,6 +151,7 @@ make clean all
 * [小歪 API](https://api.ixiaowai.cn/)
 * [和风天气](https://dev.qweather.com/)
 * [ROLL](https://www.mxnzp.com/doc/list)
-* [Hitokoto 一言](https://hitokoto.cn/)
+* [Hitokoto 一言](https://hitokoto.cn/)如果你不希望网站出现一些动漫里的社死台词，我希望你换一个。
+  
 
-<a title="SSL" target="_blank" href="https://myssl.com/seal/detail?domain=blog.imsyy.top"><img src="https://img.shields.io/badge/MySSL-安全认证-brightgreen"></a>&nbsp;<a title="CDN" target="_blank" href="https://cdnjs.com/"><img src="https://img.shields.io/badge/CDN-Cloudflare-blue"></a>&nbsp;<a title="Copyright" target="_blank" href="https://imsyy.top/"><img src="https://img.shields.io/badge/Copyright%20%C2%A9%202020--2022-%E7%84%A1%E5%90%8D-red"></a>
+<a title="SSL" target="_blank" href="https://myssl.com/seal/detail?domain=www.dawnlan.top"><img src="https://img.shields.io/badge/MySSL-安全认证-brightgreen"></a>&nbsp;<a title="CDN" target="_blank" href="https://cdnjs.com/"><img src="https://img.shields.io/badge/CDN-Cloudflare-blue"></a>&nbsp;<a title="Copyright" target="_blank" href="https://imsyy.top/"><img src="https://img.shields.io/badge/Copyright%20%C2%A9%202020--2022-%E7%84%A1%E5%90%8D-red"></a>
