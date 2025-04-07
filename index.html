@@ -154,11 +154,18 @@
                                 <a id="link-text">点击这里联系我</a>
                             </div>
                             
-                             <div class="message cards" id="switchmore">
+                             <div class="musiclist cards" id="switchmore">
                                 <div class="des" id="des">
                                     <i class="fa-solid fa-quote-left"></i>
                                         <span id="change1">音乐播放器</span>
                                     <i class="fa-solid fa-quote-right"></i>
+                                </div>
+                                <div class="music-control">
+                                    <i class="fa-solid fa-backward-step" id="last"></i>
+                                    <div id="play">
+                                        <i class="fa-solid fa-play"></i>
+                                    </div>
+                                    <i class="fa-solid fa-forward-step" id="next"></i>
                                 </div>
                                       <!--音乐播放器-->
                            <div id="aplayer"></div>
@@ -173,7 +180,7 @@
                       mutex: true,                //互斥模式：阻止多个播放器同时播放，当前播放器播放时暂停其他播放器
                       order: 'random',            //音频循环顺序（'list'：顺序, 'random'：随机）
                      preload: 'auto',            //预加载（'none'：不预加载, 'metadata'：元数据, 'auto'：自动）
-                     listFolded: false,          //列表默认折叠，开启为true
+                     listFolded: true,          //列表默认折叠，开启为true
                       theme: '#66ccff',           //主题颜色
                        audio: [{
                         name: '不到啊',           //歌曲名称
@@ -552,7 +559,24 @@
                         </div>
                     </div>
                 </div>
+                <!--顶部搜索栏-->
+            <header>
+            <div class="search-container">
+            <!-- 修改1: 将action改为百度搜索URL -->
+            <form id="search-form" class="search-box" action="https://www.baidu.com/s" method="get" target="_blank">
+                <!-- 修改2: 百度使用wd作为查询参数名 -->
+                <input type="text" name="wd" placeholder="搜索网站内容..." class="search-input" autocomplete="off">
+                <button type="submit" class="search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+                <!-- 修改3: 添加百度站点限制(可选) -->
+                <input type="hidden" name="si" value="yourdomain.com"> <!-- 替换yourdomain.com为你的域名 -->
+            </form>
+            <div class="search-suggestions" id="suggestions"></div>
             </div>
+            </header>
+            <!--顶部搜索栏结束-->
+        </div>
         </main>
         <!-- 版权信息 -->
         <footer id="footer" class="fixed-bottom footer">
@@ -567,23 +591,7 @@
             <div id="lrc"></div>
         </footer>
     </section>
-    <!--顶部搜索栏-->
-    <header>
-        <div class="search-container">
-            <!-- 修改1: 将action改为百度搜索URL -->
-            <form id="search-form" class="search-box" action="https://www.baidu.com/s" method="get" target="_blank">
-                <!-- 修改2: 百度使用wd作为查询参数名 -->
-                <input type="text" name="wd" placeholder="搜索网站内容..." class="search-input" autocomplete="off">
-                <button type="submit" class="search-button">
-                    <i class="fas fa-search"></i>
-                </button>
-                <!-- 修改3: 添加百度站点限制(可选) -->
-                <input type="hidden" name="si" value="yourdomain.com"> <!-- 替换yourdomain.com为你的域名 -->
-            </form>
-            <div class="search-suggestions" id="suggestions"></div>
-        </div>
-    </header>
-
+    
     <!-- sw.js -->
     <script>
         if ("serviceWorker" in navigator) {
