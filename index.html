@@ -34,6 +34,7 @@
     <link rel="apple-touch-icon" href="./img/icon/apple-touch-icon.png">
     <link rel="stylesheet" href="APlayer/APlayer.min.css"><!--音乐悬窗播放器重定制-->
     <link rel="stylesheet" href="./css/Nav.css"> <!-- Nav导航栏样式 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"><!-- 顶部搜索栏样式 -->
     <!-- Izitoast -->
     <link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-y/izitoast/1.4.0/css/iziToast.min.css">
     <script type="text/javascript"
@@ -79,14 +80,16 @@
 	<!--侧边栏-->
 	<div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="https://www.dawnlan.top/"><i class="fa fa-home" aria-hidden="true" /></i>首页</a>
+      <a href="index.html"><i class="fa fa-home" aria-hidden="true" /></i>首页</a>
          <a href="https://github.com/dawn-ruokun">github项目跳转链接</a>
           <a href="#">施工中！</a>
              <a href="#">施工中！</a>
               <a href="#">施工中！</a>
               <a href="./lan.html"><i class="fas fa-info-circle"></i>关于</a>
+              
  
     </div>
+    
         <script>
             function openNav() {
              document.getElementById("mySidenav").style.width = "250px";
@@ -178,7 +181,7 @@
                         url: 'https://music.163.com/#/playlist?id=891520038',         //歌曲源文件地址
                          cover: 'https://p1.music.126.net/p7Lm1nQwEnggAQfFDUWERA==/109951166628163863.jpg?param=200y200',     //歌曲封面地址
                            lrc:  'lrc.lrc',        //歌曲的歌词文件
-                           theme: '#66ccff'        //主题颜色（优先）
+                           theme: '#66ccff        //主题颜色（优先）
                                     },]
                                   });
                         </script>
@@ -213,7 +216,7 @@
                                     <div class="music" id="music">
                                         <div class="music-all">
                                             <div class="music-button">
-                                                <div id="music-open">音乐列表</div>
+                                                <!-- <div id="music-open">音乐列表</div> -->
                                                 <div id="music-close">回到一言</div>
                                             </div>
                                             <div class="music-control">
@@ -564,6 +567,23 @@
             <div id="lrc"></div>
         </footer>
     </section>
+    <!--顶部搜索栏-->
+    <header>
+        <div class="search-container">
+            <!-- 修改1: 将action改为百度搜索URL -->
+            <form id="search-form" class="search-box" action="https://www.baidu.com/s" method="get" target="_blank">
+                <!-- 修改2: 百度使用wd作为查询参数名 -->
+                <input type="text" name="wd" placeholder="搜索网站内容..." class="search-input" autocomplete="off">
+                <button type="submit" class="search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+                <!-- 修改3: 添加百度站点限制(可选) -->
+                <input type="hidden" name="si" value="yourdomain.com"> <!-- 替换yourdomain.com为你的域名 -->
+            </form>
+            <div class="search-suggestions" id="suggestions"></div>
+        </div>
+    </header>
+
     <!-- sw.js -->
     <script>
         if ("serviceWorker" in navigator) {
@@ -577,6 +597,7 @@
         <div class="noscript fixed-top">请开启 JavaScript</div>
     </noscript>
     <!-- JS -->
+    <script type="text/javascript" src="./js/script.js"></script>
     <script type="text/javascript" src="./js/main.js"></script>
     <script type="text/javascript" src="./js/set.js"></script>
     <script type="text/javascript" src="./js/time.js"></script>
