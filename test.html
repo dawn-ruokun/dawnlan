@@ -1,0 +1,119 @@
+
+/*
+作者: imsyy
+主页：https://www.dawnlan.top/
+GitHub：https://github.com/dawn-ruokun/dawnlan
+版权所有，请勿删除
+*/
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>幕布跳转动画</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+       /* 基础样式 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    overflow-x: hidden;
+    background-color: #f5f5f5;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+    color: #333;
+}
+
+/* 现代风格按钮 */
+.modern-btn {
+    position: relative;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.modern-btn i {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.modern-btn:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.modern-btn:hover i {
+    transform: translateX(4px);
+}
+
+/* 幕布样式 */
+.curtain {
+    position: fixed;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 1000;
+    transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+    will-change: transform;
+}
+    </style>
+</head>
+<body>
+    <!-- 主要内容 -->
+    <div class="content">
+        <h1>我的网站</h1>
+        <p>这是一个示例页面，点击下方按钮体验幕布跳转效果</p>
+        
+        <!-- 跳转按钮 -->
+        <button id="transition-btn" class="modern-btn">
+            <span>点击跳转</span>
+            <i class="fas fa-arrow-right"></i>
+        </button>
+    </div>
+    
+    <!-- 幕布元素 -->
+    <div class="curtain"></div>
+    
+    <script>
+       document.addEventListener('DOMContentLoaded', function() {
+    const transitionBtn = document.getElementById('transition-btn');
+    const curtain = document.querySelector('.curtain');
+    const targetUrl = 'https://www.dawnlan.top/blog'; // 替换为你的目标URL
+    
+    transitionBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // 显示幕布并开始动画
+        curtain.style.transform = 'translateY(-100%)';
+        
+        // 动画结束后跳转
+        curtain.addEventListener('transitionend', function() {
+            window.location.href = targetUrl;
+        }, { once: true });
+        
+        // 防止多次点击
+        transitionBtn.style.pointerEvents = 'none';
+    });
+});
+    </script>
+</body>
+</html>
