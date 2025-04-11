@@ -89,18 +89,7 @@
               
  
     </div>
-    
-        <script>
-            function openNav() {
-             document.getElementById("mySidenav").style.width = "250px";
-             document.getElementById("main").style.marginLeft = "250px";
-            }
 
-            function closeNav() {
-             document.getElementById("mySidenav").style.width = "0";
-             document.getElementById("main").style.marginLeft= "0";
-            }
-        </script>
         <!-- 背景图片 -->
             <section id="section" class="section">
             <div class="bg-all">
@@ -598,6 +587,18 @@
             window.addEventListener("load", function () {
                 navigator.serviceWorker.register("sw.js");
             });
+        }
+    </script>
+    <!-- 侧边栏按钮定义 -->
+    <script>
+        function openNav() {        
+         document.getElementById("mySidenav").style.width = "250px";
+         document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+         document.getElementById("mySidenav").style.width = "0";
+         document.getElementById("main").style.marginLeft= "0";
         }
     </script>
     <!-- noscript -->
