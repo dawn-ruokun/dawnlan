@@ -81,10 +81,10 @@
 	<div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <a href="index.html"><i class="fa fa-home" aria-hidden="true" /></i>首页</a>
-         <a href="https://github.com/dawn-ruokun">github项目跳转链接</a>
-          <a href="#">施工中！</a>
-             <a href="#">施工中！</a>
-              <a href="#">施工中！</a>
+         <a href="https://github.com/dawn-ruokun"><i class="fa-brands fa-github fa-lg"></i>github项目跳转链接</a>
+          <a href="test.html"><i class="fa-solid fa-microscope fa-lg"></i>项目开发测试</a>
+             <a href="#"><i class="fa-solid fa-person-digging fa-lg"></i>施工中！</a>
+              <a href="#"><i class="fa-solid fa-person-digging fa-lg"></i>施工中！</a>
               <a href="./lan.html"><i class="fas fa-info-circle"></i>关于</a>
               
  
@@ -331,18 +331,26 @@
                                         </a>
                                     </div>
                                 </div>
-                        </br><!--第三行换行代码-->
+                            </br><!--第三行换行代码-->
                                 <div class="roa">
                                      <div class="col">
-                                        <a id="link-url-1" href="./blog" target="_blank">
+                                        <a id="transition-btn" target="_blank">
                                             <div class="link-card cards">
-                                                <i id="link-icon-1" class="fa-solid fa-blog"></i>
-                                                <span class="link-name" id="link-name-1">dawn博客(重建中)</span>
+                                                <i id="link-icon-1" class="fa-solid fa-blog "></i>
+                                                <span class="link-name " id="transition-btn">dawn博客(重建中)</span>
+                                                <i class="fas fa-arrow-right"></i>
                                             </div>
+                                             <!-- 幕布元素 -->
+                                             <div class="curtain">
+                                             <!-- 添加拉绳元素 -->
+                                             <div class="rope">
+                                              <div class="rope-handle"></div>
+                                              <div class="rope-cord"></div>
+                                                </div>
+                                             </div>
                                         </a>
                                     </div>
                                 </div>
-                                
                             </div>
                        </div>
                     </div>
@@ -551,14 +559,14 @@
                 <!--顶部搜索栏-->
             <header>
             <div class="search-container">
-            <!-- 修改1: 将action改为百度搜索URL -->
+            <!-- 百度搜索URL -->
             <form id="search-form" class="search-box" action="https://www.baidu.com/s" method="get" target="_blank">
-                <!-- 修改2: 百度使用wd作为查询参数名 -->
+                <!-- 百度使用wd作为查询参数名 -->
                 <input type="text" name="wd" placeholder="搜索网站内容..." class="search-input" autocomplete="off">
                 <button type="submit" class="search-button">
                     <i class="fas fa-search"></i>
                 </button>
-                <!-- 修改3: 添加百度站点限制(可选) -->
+                <!-- 百度站点限制(可选) -->
                 <input type="hidden" name="si" value="yourdomain.com"> <!-- 替换yourdomain.com为你的域名 -->
             </form>
             <div class="search-suggestions" id="suggestions"></div>
@@ -601,6 +609,29 @@
          document.getElementById("main").style.marginLeft= "0";
         }
     </script>
+    <!-- 幕布加载效果 -->
+    <script>
+     document.addEventListener('DOMContentLoaded', function() {
+    const transitionBtn = document.getElementById('transition-btn');
+    const curtain = document.querySelector('.curtain');
+    const targetUrl = 'https://www.dawnlan.top/blog'; // 目标URL
+    
+    transitionBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // 添加active类触发动画
+        curtain.classList.add('active');
+        
+        // 动画结束后跳转
+        curtain.addEventListener('transitionend', function() {
+            window.location.href = targetUrl;
+        }, { once: true });
+        
+        // 防止多次点击
+        transitionBtn.style.pointerEvents = 'none';
+    });
+});
+     </script>
     <!-- noscript -->
     <noscript>
         <div class="noscript fixed-top">请开启 JavaScript</div>
@@ -612,6 +643,14 @@
     <script type="text/javascript" src="./js/time.js"></script>
     <script type="text/javascript" src="./js/js.cookie.js"></script>
     <script type="text/javascript" src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-y/bootstrap/5.1.0/js/bootstrap.min.js"></script>
+     
+
+    <!-- 备份区，一些已经更改过样式的小样式备份主体 -->
+    <!-- 跳转按钮 -->
+                                                 <!-- <button id="transition-btn" class="modern-btn">
+                                                  <span>DAwn博客</span>
+                                                 <i class="fas fa-arrow-right"></i>
+                                                 </button> -->
     <!--音乐播放器-->
 <!--<div id="aplayer"></div>-->
 <!--<script src="APlayer/APlayer.min.js"></script>-->
