@@ -5,16 +5,18 @@
 将各类工具型网站聚合起来，方便使用，原理类似于收藏夹，可以这么理解。
     网站服务器由于一段时间忘记续费，导致很大一段数据丢失，不得不重新搭建，因此很多地方都是套用的模板，看起来十分不完善。请各位见谅！
         网站属于公益类型，没有任何广告，非盈利学习类网站。欢迎各位拉取项目搭建自己的网站！
+            本项目会持续更新。
 </p>
-
-模板引用——![無名の主页](https://img.imsyy.top/other/imsyy-home.webp)
 
 >主页的 Logo 字体已经过压缩，若用本站 Logo 以外的字母会变回默认字体，这里是 [完整字体](https://file.imsyy.top/font/Pacifico-Regular.ttf)
 
 ### Demo
 >由于 CDN 缓存原因，查看最新效果可能需要 `Ctrl` + `F5` 强制刷新浏览器缓存
 
-- [無名の主页](https://www.imsyy.top)
+    <p>原项目开发- [無名の主页](https://github.com/imsyy/home)，原作者大佬已在n年前停止更新，因受到大量本不应有的关注。
+目前该项目属于公共PR阶段，我在n年前出于兴趣使然拉取该项目做出了自己的第一个个人网站，后又在此基础上优化代码(添了一坨)变成如今的样子，目前
+原项目已被各位大佬更新支持一键部署功能。
+</p>
 
 ### 功能
 
@@ -26,14 +28,16 @@
 - [x] 时光进度条
 - [x] 音乐播放器
 - [x] 移动端适配
+- [x] 搜索功能
 * [ ] 还没想好呢
 
 
 ### 天气
 
 由于原天气 API 不稳定，已更换天气 API，现需要前往以下网站获取 key
-
-    天气类的api不太稳定，且定位有一点小问题，原作者使用的是和风，高德的天气定位很准但很麻烦，因此我拉取的别家公益性api。你可以自行搜索，找一些更稳定的。
+    
+    天气类的api不太稳定，且定位有一点小问题，原作者使用的是和风，我拉取的别家公益性api。你可以自行搜索，找一些更稳定的。
+    推荐前往高德开发者控制台获取高德的天气api。
 - 前往 [ROLL](https://www.mxnzp.com/doc/list) 获取 app_id 和 app_secret，用于获取城市信息
 - 前往 [和风天气](https://dev.qweather.com/) 获取 key，用于获取天气信息
 
@@ -63,11 +67,11 @@
         "Oops !", //站点介绍标题点击后文字
         "哎呀，这都被你发现了 ( 再点击一次可关闭 )" //站点介绍内容点击后文字
     ],
-    "github": "imsyy", //Github 用户名
-    "qq": "1539250352", //QQ
-    "email": "one@imsyy.top", //Email电子邮件
-    "telegram": "bottom_user", //Telegram 用户名
-    "twitter": "iimmsyy", //Twitter用户名
+    "github": "dawn-ruokun", //Github 用户名
+    "qq": "2270559860", //QQ
+    "email": "ruokun.rhk@qq.com", //Email电子邮件
+    "telegram": "ieee804", //Telegram 用户名
+    "twitter": "mahuate44443933", //Twitter用户名
     "weather_api": "https://www.yiketianqi.com", //天气 API
     "link_1": [
         "https://blog.imsyy.top/", //链接地址
@@ -86,7 +90,7 @@
         ]
     ],
     "Copyright_year": "2020", //站点起始年份
-    "Copyright_text": "無名" //版权
+    "Copyright_text": "dawn-ruokun" //版权
 }
 ```
 
@@ -151,7 +155,7 @@ make clean all
 * [小歪 API](https://api.ixiaowai.cn/)
 * [和风天气](https://dev.qweather.com/)
 * [ROLL](https://www.mxnzp.com/doc/list)
-* [Hitokoto 一言](https://hitokoto.cn/)如果你不希望网站出现一些动漫里的社死台词，我希望你换一个。
+* [Hitokoto 一言](https://hitokoto.cn/)<p>如果你不希望网站出现一些动漫里的社死台词，我希望你换一个。</p>
   
 
 <a title="SSL" target="_blank" href="https://myssl.com/seal/detail?domain=www.dawnlan.top"><img src="https://img.shields.io/badge/MySSL-安全认证-brightgreen"></a>&nbsp;<a title="CDN" target="_blank" href="https://cdnjs.com/"><img src="https://img.shields.io/badge/CDN-Cloudflare-blue"></a>&nbsp;<a title="Copyright" target="_blank" href="https://www.dawnlan.top/"><img src="https://img.shields.io/badge/Copyright%20%C2%A9%202020--2022-%E7%84%A1%E5%90%8D-red"></a>
