@@ -27,6 +27,7 @@
     <meta name="keywords" content="UI设计,UI设计素材,设计导航,网址导航,设计资源,创意导航,创意网站导航,设计师网址大全,设计素材大全,设计师导航,UI设计资源,优秀UI设计欣赏,设计师导航,设计师网址大全,设计师网址导航,产品经理网址导航,交互设计师网址导航,www.dawnlan.top">
     <meta name="description" content="WebStack - 收集国内外优秀设计网站、UI设计资源网站、灵感创意网站、素材资源网站，定时更新分享优质产品设计书签。www.dawnlan.top">
     <link rel="shortcut icon" href="../assets/images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Arimo:400,700,400italic">
     <link rel="stylesheet" href="../assets/css/fonts/linecons/css/linecons.css">
     <link rel="stylesheet" href="../assets/css/fonts/fontawesome/css/font-awesome.min.css">
@@ -35,6 +36,8 @@
     <link rel="stylesheet" href="../assets/css/xenon-components.css">
     <link rel="stylesheet" href="../assets/css/xenon-skins.css">
     <link rel="stylesheet" href="../assets/css/nav.css">
+    <link rel="stylesheet" href="../assets/css/search.css">
+    <!-- <link rel="stylesheet" href="/css/style.css"> -->
     <script src="../assets/js/jquery-1.11.1.min.js"></script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -54,7 +57,6 @@
     <meta name="twitter:description" content="UI设计,UI设计素材,设计导航,网址导航,设计资源,创意导航,创意网站导航,设计师网址大全,设计素材大全,设计师导航,UI设计资源,优秀UI设计欣赏,设计师导航,设计师网址大全,设计师网址导航,产品经理网址导航,交互设计师网址导航,www.dawnlan.top">
     <meta name="twitter:image" content="http://www.dawnlan.top/Nav-List/assets/images/webstack_banner_cn.png">
 </head>
-
 <body class="page-body">
     <!-- skin-white -->
     <div class="page-container">
@@ -284,7 +286,7 @@
                 </ul>
             </div>
         </div>
-        <div class="main-content">
+        <div class="main-content bg">
             <nav class="navbar user-info-navbar" role="navigation">
                 <!-- User Info, Notifications and Menu Bar -->
                 <!-- Left links for user info navbar -->
@@ -320,7 +322,6 @@
                     </li>
                 </ul>
                 <!-- <a href="https://github.com/WebStackPage/WebStackPage.github.io" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a> -->
-
             </nav>
             <!-- 常用推荐 -->
             <h4 class="text-gray"><i class="linecons-tag" style="margin-right: 7px;" id="常用推荐"></i>常用推荐</h4>
@@ -4216,8 +4217,8 @@
                 <div class="footer-inner">
                     <!-- Add your copyright text here -->
                     <div class="footer-text">
-                        &copy; 2017-2022
-                        <a href="../cn/about.html"><strong>WebStack</strong></a> design by <a href="https://www.viggoz.com" target="_blank"><strong>Viggo</strong></a>
+                        &copy; 2022 - 2025
+                        <a href="../cn/about.html"><strong>NAV-List</strong></a> design by <a href="http://dawnlan.top" target="_blank"><strong>Ryan-Kuhn</strong></a>
                         <!--  - Purchase for only <strong>23$</strong> -->
                     </div>
                     <!-- Go to Top Link, just add rel="go-top" to any link to add this functionality -->
@@ -4230,6 +4231,58 @@
             </footer>
         </div>
     </div>
+    <!-- 搜索栏 -->
+                <!-- 悬浮搜索框 -->
+                <div id="floatingSearch" style="
+                position: fixed;
+                bottom: 30px;
+                right: 30px;
+                z-index: 1000;
+                background: white;
+                padding: 15px;
+                border-radius: 10px;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+                transition: transform 0.3s;
+                ">
+            <div style="display: flex; margin-bottom: 10px;">
+                <input type="text" id="dynamicSearchInput" placeholder="搜索网站..." style="
+                    padding: 8px 12px;
+                    border: 1px solid #ddd;
+                    border-radius: 4px;
+                     width: 180px;
+                    outline: none;
+                ">
+            <button onclick="performSearch()" style="
+                margin-left: 8px;
+                padding: 0 12px;
+                background: #4285f4;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            ">搜索</button>
+            </div>
+            <div id="searchNav" style="
+                display: none;
+                justify-content: space-between;
+                ">
+            <button onclick="navigateResults(-1)" style="
+                padding: 4px 8px;
+                background: #f1f3f4;
+                border: none;
+                border-radius: 3px;
+                cursor: pointer;
+            ">↑ 上一个</button>
+            <span id="resultCounter" style="padding: 0 10px;"></span>
+            <button onclick="navigateResults(1)" style="
+                padding: 4px 8px;
+                background: #f1f3f4;
+                border: none;
+                border-radius: 3px;
+                cursor: pointer;
+            ">↓ 下一个</button>
+            </div>
+            </div>
     <!-- 锚点平滑移动 -->
     <script type="text/javascript">
     $(document).ready(function() {
@@ -4303,6 +4356,8 @@
     <!-- JavaScripts initializations and stuff -->
     <script src="../assets/js/xenon-custom.js"></script>
     <script src="../assets/js/lozad.js"></script>
+    <!-- search-list -->
+    <script src="../assets/js/search.js"></script>
 </body>
 
 </html>

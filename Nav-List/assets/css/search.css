@@ -1,0 +1,123 @@
+ /* 基础样式 */
+ /* body {
+    font-family: 'Segoe UI', 'PingFang SC', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f7fa;
+} */
+
+/* 搜索框样式 */
+.search-container {
+    position: relative;
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto 30px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 12px 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 25px 0 0 25px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.search-input:focus {
+    border-color: #4285f4;
+    box-shadow: 0 2px 15px rgba(66, 133, 244, 0.2);
+}
+
+.search-button {
+    width: 50px;
+    background: #4285f4;
+    color: white;
+    border: none;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.search-button:hover {
+    background: #3367d6;
+}
+
+/* 网站区块样式 */
+/* .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+} */
+
+/* .site-card {
+    width: 280px;
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.site-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+}
+
+.site-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.site-name {
+    font-weight: 600;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+.site-desc {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.4;
+} */
+
+/* 高亮效果 */
+@keyframes highlight {
+    0% { background-color: rgba(66, 133, 244, 0.1); }
+    50% { background-color: rgba(66, 133, 244, 0.3); }
+    100% { background-color: rgba(66, 133, 244, 0.1); }
+}
+
+.highlight {
+    animation: highlight 2s ease-in-out;
+    position: relative;
+    z-index: 10;
+}
+
+.highlight::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 2px solid #4285f4;
+    border-radius: 12px;
+    pointer-events: none;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .search-container {
+        max-width: 100%;
+    }
+    
+    .site-card {
+        width: 100%;
+    }
+}

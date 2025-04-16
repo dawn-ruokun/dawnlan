@@ -1,3 +1,15 @@
+/* 网格背景 */
+.bg {
+    background-color: #66ccff78;  /* 天蓝色基色 */
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.3) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.3) 1px, transparent 1px);
+    background-size: 20px 20px;  /* 网格间距 */
+}
+.right {
+    float: right;
+    margin-right: 20px;
+}
 .box2 {
     height: 86px;
     cursor: pointer;
