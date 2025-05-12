@@ -3,7 +3,7 @@
 <p>
 <strong><h2>Dawnlan资源聚合网站</h2></strong>
 将各类工具型网站聚合起来，方便使用，原理类似于收藏夹，可以这么理解。
-    网站服务器由于一段时间忘记续费，导致很大一段数据丢失，不得不重新搭建，因此很多地方都是套用的模板，看起来十分不完善。请各位见谅！
+    网站服务器由于一段时间忘记续费，导致很大一段数据丢失，不得不重新搭建，看起来十分不完善。请各位见谅！
         网站属于公益类型，没有任何广告，非盈利学习类网站。欢迎各位拉取项目搭建自己的网站！
             本项目会持续更新。
 </p>
@@ -13,9 +13,9 @@
 ### Demo
 >由于 CDN 缓存原因，查看最新效果可能需要 `Ctrl` + `F5` 强制刷新浏览器缓存
 
-    <p>原项目开发- [無名の主页](https://github.com/imsyy/home)，原作者大佬已在n年前停止更新，因受到大量本不应有的关注。
-目前该项目属于公共PR阶段，我在n年前出于兴趣使然拉取该项目做出了自己的第一个个人网站，后又在此基础上优化代码(添了一坨)变成如今的样子，目前
-原项目已被各位大佬更新支持一键部署功能。
+    <p>原项目开发- [無名の主页](https://github.com/imsyy/home)，原作者大佬已在n年前停止更新，因泛滥。
+目前该项目属于公共PR阶段，我在n年前出于兴趣使然拉取该项目雏形做出了自己的第一个个人网站，后又在此基础上优化并添加代码变成如今的样子，
+原项目已被各位大佬更新支持一键部署功能，各位按需拉取。
 </p>
 
 ### 功能
@@ -36,8 +36,7 @@
 
 由于原天气 API 不稳定，已更换天气 API，现需要前往以下网站获取 key
     
-    天气类的api不太稳定，且定位有一点小问题，原作者使用的是和风，我拉取的别家公益性api。你可以自行搜索，找一些更稳定的。
-    推荐前往高德开发者控制台获取高德的天气api。
+    天气类的api不太稳定，且定位有一点小问题，推荐前往高德开发者控制台获取高德的天气api。
 - 前往 [ROLL](https://www.mxnzp.com/doc/list) 获取 app_id 和 app_secret，用于获取城市信息
 - 前往 [和风天气](https://dev.qweather.com/) 获取 key，用于获取天气信息
 
@@ -45,62 +44,14 @@
 
 <!-- ### 配置
 
-本项目采用 `json` 文件来配置站点内容，该配置不受版本更新影响，可将自定义配置写入 `setting.json` 以更改页面内容
+本项目可采用 `json` 文件来配置站点内容，该配置不受版本更新影响，可将自定义配置写入 `setting.json` 以更改页面内容
 
-<details>
-<summary>配置说明</summary>
-
-```json
-{
-    "title": "网页标题",
-    "description": "网页简短介绍",
-    "keywords": "网页关键词",
-    "author": "网页作者",
-    "logo_img": "Logo图片路径",
-    "logo_text_1": "域名前缀",
-    "logo_text_2": "域名后缀",
-    "des_title": [
-        "Hello World !", //站点介绍标题
-        "一个建立于 21 世纪的小站，存活于互联网的边缘" //站点介绍内容
-    ],
-    "des_title_change": [
-        "Oops !", //站点介绍标题点击后文字
-        "哎呀，这都被你发现了 ( 再点击一次可关闭 )" //站点介绍内容点击后文字
-    ],
-    "github": "dawn-ruokun", //Github 用户名
-    "qq": "2270559860", //QQ
-    "email": "ruokun.rhk@qq.com", //Email电子邮件
-    "telegram": "ieee804", //Telegram 用户名
-    "twitter": "mahuate44443933", //Twitter用户名
-    "weather_api": "https://www.yiketianqi.com", //天气 API
-    "link_1": [
-        "https://blog.imsyy.top/", //链接地址
-        "fa-solid fa-blog", //图标类名
-        "博客" //链接文字
-    ],
-    "link_2": [
-        "https://drive.imsyy.top/",
-        "fa-solid fa-cloud",
-        "网盘"
-    ],
-    "wallpaper_api": [
-        [
-            "每日一图", //壁纸设置项名称
-            "https://api.dujin.org/bing/1920.php" //壁纸图片链接
-        ]
-    ],
-    "Copyright_year": "2020", //站点起始年份
-    "Copyright_text": "dawn-ruokun" //版权
-}
-```
-
-</details> -->
+-->
 
 ### 音乐
 
- ！该音乐的框架有一些问题，我采用了其它方案替代，达到我自己喜欢的效果，但对手机端的网页和缩小后的网页适配有一些问题，但没大影响，我保留了这个设计。
+ ！该音乐的框架有一些问题，可采用其它方案替代，达到自己喜欢的效果，对手机端的网页和缩小后的网页适配有一些问题，但没大影响，我保留了这个设计，因为他看起来很不错。
 >本项目采用了基于 `MetingJS` 的 `Aplayer` 音乐播放器，可实现快速自定义歌单  
->*仅支持 **中国大陆地区**，其他区域请将 [以下内容](https://file.imsyy.top/js/music/music-other.js) 替换 `music.js` 以实现音乐播放器的正常使用
 
 更改 `music.js` 的参数即可实现自定义歌单列表
 
@@ -150,7 +101,7 @@ make clean all
 * [Aplayer](https://aplayer.js.org/)
 
 ### API
-
+    部分api出现问题后我会更换，可能在此没有及时列出。
 * [MetingAPI By 武恩赐](https://api.wuenci.com/meting/api/)
 * [小歪 API](https://api.ixiaowai.cn/)
 * [和风天气](https://dev.qweather.com/)
